@@ -1,0 +1,98 @@
+/* Estilos propios que complementan a Bootstrap */
+:root {
+  --color-principal: #123c3f;       /* verde azulado oscuro */
+  --color-principal-claro: #1d5559;
+  --color-acento: #c65d3b;          /* terracota */
+  --color-acento-oscuro: #a94a2c;
+  --color-crema: #f7f2ea;
+  --color-arena: #e9dfd0;
+  --color-texto: #24302f;
+  --bs-body-font-family: "Manrope", system-ui, sans-serif;
+  --bs-body-color: var(--color-texto);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px; /* evita que el navbar fijo tape los títulos */
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+  background-color: #fffdf9;
+}
+
+.bg-principal { background-color: var(--color-principal) !important; }
+.text-principal { color: var(--color-principal) !important; }
+.bg-acento { background-color: var(--color-acento) !important; }
+.text-acento { color: #f0a383 !important; } /* acento aclarado para leerse sobre fondo oscuro */
+.bg-crema { background-color: var(--color-crema) !important; }
+.text-white-75 { color: rgba(255, 255, 255, 0.78) !important; }
+.marca-sub { font-size: 0.7rem; letter-spacing: 0.06em; opacity: 0.8; }
+
+h1, h2 { letter-spacing: -0.02em; }
+
+.btn-acento {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--color-acento);
+  --bs-btn-border-color: var(--color-acento);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--color-acento-oscuro);
+  --bs-btn-hover-border-color: var(--color-acento-oscuro);
+  --bs-btn-active-bg: var(--color-acento-oscuro);
+  --bs-btn-active-border-color: var(--color-acento-oscuro);
+  --bs-btn-disabled-bg: var(--color-acento);
+  --bs-btn-disabled-border-color: var(--color-acento);
+  --bs-btn-disabled-color: #fff;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.link-acento { color: var(--color-acento); text-decoration: none; }
+.link-acento:hover { color: var(--color-acento-oscuro); text-decoration: underline; }
+
+/* Hero: color sólido con una franja inferior */
+.hero {
+  background-color: var(--color-principal);
+  border-bottom: 6px solid var(--color-acento);
+}
+
+.cifra {
+  border-left: 3px solid var(--color-acento);
+  padding-left: 1rem !important;
+}
+
+/* Tarjetas de carreras */
+.tarjeta-hover {
+  border-top: 3px solid var(--color-principal-claro) !important;
+  border-radius: 6px;
+  transition: border-color 0.2s ease;
+}
+.tarjeta-hover:hover { border-top-color: var(--color-acento) !important; }
+
+/* Beneficios */
+.beneficio {
+  background: #fff;
+  border-color: var(--color-arena) !important;
+  border-radius: 6px !important;
+}
+.beneficio-num {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--color-acento);
+  letter-spacing: 0.08em;
+}
+
+/* Formulario */
+.card.rounded-4 { border-radius: 10px !important; }
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: var(--color-principal-claro);
+  box-shadow: 0 0 0 0.2rem rgba(29, 85, 89, 0.2);
+}
+
+.form-check-input:checked {
+  background-color: var(--color-principal);
+  border-color: var(--color-principal);
+}
